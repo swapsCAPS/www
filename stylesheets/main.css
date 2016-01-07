@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "8 Bit";
+    src: url("../fonts/retro.ttf") format("truetype");
+}
+
+body {
+    background-color: black;
+}
+
+.h4x {
+    text-align: center;
+    position: relative;
+    font-family: "8 Bit";
+    color: #A4C639;
+}
+
+.greeting {
+    line-height: 300%;
+}
+
+.bye-container {
+    text-align: center;
+    line-height: 300%;
+}
+
+.cursor {
+    margin-left: -5.5px;
+    text-align: left;
+}

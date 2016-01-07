@@ -5,27 +5,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 </head>
 
 <body class="body">
     <div>
         <p id="greeting" class="h4x greeting">Hi there!</div>
-        <p id="name" class="h4x">My name is Daniel.</div>
-        <p id="message" class="h4x">I like to make and break stuff with Android, Java, NodeJS, Python, RaspberryPi, LEGO Technics and more.</p>
+    <p id="name" class="h4x">My name is Daniel.</div>
+        <p id="message" class="h4x">I like to make and break stuff with Android, Java, NodeJS, Python, RaspberryPi,
+            Blender LEGO Technics and more.</p>
         <p id="closer" class="h4x">You get the idea ;)</p>
-        <p id="bye" class="h4x bye">Bye!</p>
-    </div>
+        <p id="bye-container" class="h4x">
+            <span id="bye" class="bye">Bye!</span>
+            <span id="cursor" class="cursor">_</span>
+        </p>
+        </div>
 </body>
 
+<script src="libs/jquery-1.11.3.min.js"></script>
 <script src="libs/CSSPlugin.min.js"></script>
 <script src="libs/EasePack.min.js"></script>
 <script src="libs/TweenLite.min.js"></script>
-
-<script>
-    window.onload = function() {
-        TweenLite.to(bye, 1.5, {ease: Bounce.easeOut, y: "300%" });
-    }
-</script>
+<script src="javascripts/m0ve-stuff.js"></script>
 
 </html>
