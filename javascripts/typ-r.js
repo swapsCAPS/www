@@ -8,14 +8,6 @@ var TypR = function() {
     return new TypR.init();
 };
 
-function typeChar(element, character, callback) {
-    setTimeout(function() {
-        currentHTML = element.html();
-        element.html(currentHTML += encodedChar(character));
-        callback();
-    }, 50);
-};
-
 function encodedChar(c) {
     if (c === "<") {
         return "&lt;";
@@ -25,7 +17,7 @@ function encodedChar(c) {
     } else {
         return c;
     }
-};
+}
 
 function blinkCursor() {
     var cursor = $("#cursor");
@@ -40,7 +32,7 @@ function blinkCursor() {
             showCursor = true;
         }
     }, blinkSpeed);
-};
+}
 
 function dropElement(element) {
     setTimeout(function() {
@@ -49,7 +41,7 @@ function dropElement(element) {
             y: "250%"
         });
     }, 1989);
-};
+}
 
 
 // Teh prototype
@@ -95,12 +87,15 @@ TypR.prototype = {
     typeElement: function(element, text, callback) {
         var length = text.length;
         var index = 0; // used to iterate over the text using charAt(index)
-        var typingSpeed = 50; // the speed characters are appended
+        var speedMin = 50; // the speed characters are appended
+        var speedMax = 75; // the speed characters are appended
         var newElementPause = 500; // the timeout between typing a new element
         // wrapper function to iterate over the text var using the index var
         function doTehTyping() {
             // check if we still need to type
             if (index !== length) {
+                // generate random typing speed
+                var speed = Math.floor(Math.random() * speedMax) + speedMin;
                 setTimeout(function() {
                     // get the current state of the  html in the element
                     var currentHTML = element.html();
@@ -114,7 +109,7 @@ TypR.prototype = {
                     index++;
                     // call back to wrapper function
                     doTehTyping();
-                }, typingSpeed);
+                }, speed);
             } else {
                 setTimeout(function() {
                     callback();
