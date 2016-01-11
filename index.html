@@ -11,6 +11,13 @@
 
 <body class="body">
     <div id="container" class="container h4x">
+        <p id="greeting" class="greeting type-anim">Hi there!</p>
+        <p id="name" class="type-anim">My name is Daniel.</p>
+        <p id="message" class="type-anim">I like to make and break stuff using Android, Java, Node, Javascript, Python, Raspberry Pis, Blender, LEGO Technics and more.</p>
+        <p id="closer" class="type-anim">Thanks for dropping by! : )</p>
+        <p id="bye-container" class="bye-container">
+            <span id="bye" class="type-anim">Bye!</span><span id="cursor" class="type-anim blink">_</span>
+        </p>
     </div>
 </body>
 
@@ -18,6 +25,11 @@
 <script src="libs/CSSPlugin.min.js"></script>
 <script src="libs/EasePack.min.js"></script>
 <script src="libs/TweenLite.min.js"></script>
-<script src="javascripts/m0ve-stuff.js"></script>
+<script src="javascripts/typ-r.js"></script>
+<script>
+window.onload = function() {
+    TypR().typeChildren("container");
+};
+</script>
 
 </html>
