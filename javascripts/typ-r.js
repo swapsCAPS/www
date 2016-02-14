@@ -87,7 +87,7 @@ TypR.prototype = {
     typeElement: function(element, text, callback) {
         var length = text.length;
         var index = 0; // used to iterate over the text using charAt(index)
-        var speedMin = 50; // the speed characters are appended
+        var speedMin = 25; // the speed characters are appended
         var speedMax = 75; // the speed characters are appended
         var newElementPause = 500; // the timeout between typing a new element
         // wrapper function to iterate over the text var using the index var
