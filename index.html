@@ -10,18 +10,28 @@
 </head>
 
 <body class="body">
-    <div id="container" class="container h4x">
+    <div id="container" class="container-fluid h4x">
         <p id="greeting" class="greeting type-anim">Hi there!</p>
         <p id="name" class="type-anim">My name is Daniel.</p>
         <p id="message" class="type-anim">I like to make and break stuff using Android, Java, Node, Javascript, Python, Raspberry Pis, Blender, LEGO Technics and more.</p>
-        <p id="3d-printer-container">
-        <span id="3d-printer" class="type-anim">O yeah! I have a 3D printer too! Want to see what's printing? Check it out here: </span><span id="3d-printer-link"><a class="type-anim" href="http://92.111.66.145:8086/#control">Teh Awesome P3Steel</a></span>
-        </p>
+        <p id="3d-printer-container" class="type-anim">O yeah! I have a 3D printer too! Want to see what's printing? Check it out below</p>
         <p id="closer" class="type-anim">Thanks for dropping by! : )</p>
-        <p id="bye-container" class="bye-container">
+        <div id="bye-bouncer" class="bye-bouncer">
+            <p id="bye-container" class="bye-container">
             <span id="bye" class="type-anim">Bye!</span><span id="cursor" class="type-anim blink">_</span>
-        </p>
+            </p>
+        </div>
     </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container h4x">
+            <ul class="nav navbar-nav">
+                <li><a href="http://92.111.66.145:8086/webcam/?action=stream">P3Steel</a></li>
+                <li><a href="http://92.111.66.145:8086/#control">Octoprint</a></li>
+            </ul>
+        </div>
+    </nav>
+
 </body>
 
 <script src="libs/jquery-1.11.3.min.js"></script>
@@ -30,9 +40,9 @@
 <script src="libs/TweenLite.min.js"></script>
 <script src="javascripts/typ-r.js"></script>
 <script>
-window.onload = function() {
-    TypR().typeChildren("container");
-};
+    window.onload = function() {
+        TypR().typeChildren("container");
+    };
 </script>
 
 </html>

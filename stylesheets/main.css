@@ -4,6 +4,7 @@
 }
 body {
     background-color: black;
+    padding-bottom: 140px;
 }
 
 .h4x {
@@ -18,6 +19,15 @@ body {
     line-height: 300%;
 }
 
+.bye-bouncer {
+    position: relative;
+    height: 50px;
+}
+
 .bye-container {
     line-height: 300%;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
 }

@@ -34,13 +34,14 @@ function blinkCursor() {
     }, blinkSpeed);
 }
 
-function dropElement(element) {
+function dropElement(selector) {
+    this.element = $(selector);
     setTimeout(function() {
         TweenLite.to(element, 1.5, {
             ease: Bounce.easeOut,
-            y: "250%"
+            height: "150px"
         });
-    }, 1989);
+    }, 1);
 }
 
 
@@ -70,6 +71,7 @@ TypR.prototype = {
         // iterate over elements using callbacks
         var index = 0;
         function typeElements(){
+
             if(index !== elementObjects.length){
                 self.typeElement(elementObjects[index], textArray[index], typeElements);
                 index++;
@@ -77,7 +79,7 @@ TypR.prototype = {
                 // finished typing all elements, blink the cursor
                 blinkCursor();
                 // and drop the bye
-                dropElement($("#bye-container"));
+                dropElement("#bye-bouncer");
             }
         }
         // start typing sequentially
@@ -87,8 +89,8 @@ TypR.prototype = {
     typeElement: function(element, text, callback) {
         var length = text.length;
         var index = 0; // used to iterate over the text using charAt(index)
-        var speedMin = 25; // the speed characters are appended
-        var speedMax = 75; // the speed characters are appended
+        var speedMin = 0; // 25; // the speed characters are appended
+        var speedMax = 0; //75; // the speed characters are appended
         var newElementPause = 500; // the timeout between typing a new element
         // wrapper function to iterate over the text var using the index var
         function doTehTyping() {
