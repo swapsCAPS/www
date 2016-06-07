@@ -41,7 +41,7 @@ function dropElement(selector) {
             ease: Bounce.easeOut,
             height: "150px"
         });
-    }, 1);
+    }, 1989);
 }
 
 
@@ -89,8 +89,8 @@ TypR.prototype = {
     typeElement: function(element, text, callback) {
         var length = text.length;
         var index = 0; // used to iterate over the text using charAt(index)
-        var speedMin = 0; // 25; // the speed characters are appended
-        var speedMax = 0; //75; // the speed characters are appended
+        var speedMin = 25; // the speed characters are appended
+        var speedMax = 75; // the speed characters are appended
         var newElementPause = 500; // the timeout between typing a new element
         // wrapper function to iterate over the text var using the index var
         function doTehTyping() {
