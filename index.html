@@ -26,7 +26,13 @@
     <nav class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="container h4x">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://92.111.66.145:8086/webcam/?action=stream">P3Steel</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">3D Printing <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://92.111.66.145:8086/webcam/?action=stream&">Live feed</a></li>
+                        <li><a href="http://www.thingiverse.com/stofstik/designs">Designs</a></li>
+                    </ul>
+                </li>
                 <li><a href="https://github.com/stofstik">Github</a></li>
                 <li><a href="https://www.linkedin.com/in/danielverstegen">LinkedIn</a></li>
             </ul>
@@ -36,6 +42,7 @@
 </body>
 
 <script src="libs/jquery-1.11.3.min.js"></script>
+<script src="libs/bootstrap.min.js"></script>
 <script src="libs/CSSPlugin.min.js"></script>
 <script src="libs/EasePack.min.js"></script>
 <script src="libs/TweenLite.min.js"></script>
