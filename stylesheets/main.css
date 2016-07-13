@@ -7,6 +7,10 @@ body {
     padding-bottom: 140px;
 }
 
+#canvas {
+    position: fixed;
+}
+
 .h4x {
     font-size: 1em;
     text-align: center;
@@ -17,6 +21,7 @@ body {
 
 .greeting {
     line-height: 300%;
+    margin-top: 24px;
 }
 
 .bye-bouncer {

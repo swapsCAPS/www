@@ -1,3 +1,10 @@
+/*
+ * Created By Daniel Verstegen
+ * You are completely free to use and alter this, but please give a shout out :)
+ *
+ * Cheers!
+ */
+
 (function(global, $){
 // TODO Re-usability
 // TODO Variable typing speed for , . ! ? etc. Looks more natural
@@ -39,7 +46,7 @@ function dropElement(selector) {
     setTimeout(function() {
         TweenLite.to(element, 1.5, {
             ease: Bounce.easeOut,
-            height: "150px"
+            height: "125px"
         });
     }, 1989);
 }

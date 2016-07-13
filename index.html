@@ -10,10 +10,11 @@
 </head>
 
 <body class="body">
+    <canvas id="canvas">Your browser does not support canvas...</canvas>
     <div id="container" class="container-fluid h4x">
         <p id="greeting" class="greeting type-anim">Hi there!</p>
         <p id="name" class="type-anim">My name is Daniel.</p>
-        <p id="message" class="type-anim">I like to make and break stuff using Android, Java, Node, Javascript, Python, Raspberry Pis, Blender, LEGO Technics and more.</p>
+        <p id="message" class="type-anim">I like to make and break stuff using Javascript, Node, Android, Raspberry Pis, Blender, LEGO Technics and more.</p>
         <p id="3d-printer-container" class="type-anim">O yeah! I have a 3D printer too! Check out what's printing below.</p>
         <p id="closer" class="type-anim">Thanks for dropping by! : )</p>
         <div id="bye-bouncer" class="bye-bouncer">
@@ -64,6 +65,7 @@
 <script src="libs/EasePack.min.js"></script>
 <script src="libs/TweenLite.min.js"></script>
 <script src="javascripts/typ-r.js"></script>
+<script src="javascripts/pulsing-circles.js"></script>
 <script>
     window.onload = function() {
         TypR().typeChildren("container");
