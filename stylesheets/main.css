@@ -1,42 +1,78 @@
-@font-face {
-    font-family: "8 Bit";
-    src: url("../fonts/retro.ttf") format("truetype");
-}
 body {
-    background-color: black;
-    padding-bottom: 140px;
+  background-color: black;
+  font-family: 'Source Code Pro', monospace;
+  overflow: hidden;
+  font-size: 14pt;
+}
+
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
 }
 
 #canvas {
-    position: fixed;
+  position: fixed;
+  left:     0;
+  top:      0;
+  bottom:   0;
+  right:    0;
 }
 
-.h4x {
-    font-size: 1em;
-    text-align: center;
-    position: relative;
-    font-family: "8 Bit";
-    color: #A4C639;
+.container {
+  position: relative;
+  color:    #b0b0b0;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vw;
 }
 
-.greeting {
-    line-height: 300%;
-    margin-top: 24px;
+.card {
+  position: absolute;
+  background-color: #fdfdfd;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  border-radius: 0.3em;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 32em;
+  height: 20em;
+
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
 }
 
-.bye-bouncer {
-    position: relative;
-    height: 50px;
+.card-content {
+  position: absolute;
+  left:     0.8em;
+  top:      0.6em;
+  bottom:   0.6em;
+  right:    0.8em;
 }
 
-.bye-container {
-    line-height: 300%;
-    position: absolute;
-    width: 100%;
-    margin: 0 auto;
-    bottom: 0;
+.head {
+  margin-top: 0.2em;
+  font-size: 18pt;
 }
 
-.inverse-list-item {
+.paragraph {
+  margin-top: 1.2em;
+}
+
+.card a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
 
 }

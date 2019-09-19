@@ -8,21 +8,25 @@
 var pulsingCircles = function(window, document){
 var canvas;
 var ctx;
-var sizeX = 0;
-var sizeY = 0;
-var globalMaxRadius = 10;
-var globalMinRadius = 5;
-var globalMaxPulses = 5;
-var globalMinPulses = 2;
-var globalMaxAnimTime = 5000;
-var globalMinAnimTime = 3000;
-var amountOfCircles = 500;
-var id = 0;
+
+var sizeX             = 0;
+var sizeY             = 0;
+var globalMaxRadius   = 20;
+var globalMinRadius   = 10;
+var globalMaxPulses   = 2;
+var globalMinPulses   = 1;
+var globalMaxAnimTime = 30000;
+var globalMinAnimTime = 25000;
+var amountOfCircles   = 300;
+var id                = 0;
+
 var colorSchemes = {
-    darkBlue: ['2,40,89', '1,17,38', '2,64,89', '67,68,91', '20,97,115'],
-    green: ['174,243,103', '157,182,131', '119,167,71', '210,243,176', '83,116,49']
+    darkBlue: ['2,40,89',     '1,17,38',     '2,64,89',    '67,68,91',    '20,97,115'],
+    green:    ['174,243,103', '157,182,131', '119,167,71', '210,243,176', '83,116,49'],
+    light:    ['250,250,250', '248,248,248', '245,245,245']
 };
-var colors = colorSchemes.darkBlue;
+var backgroundColor = "#EFEFEF";
+var colors = colorSchemes.light;
 var circles = [];
 
 function Circle(id, x, y, radius, maxRadius, rgbColorString, animTime, timeToLive, startFadeOut) {
@@ -48,7 +52,6 @@ function init() {
     // Get the canvas element to work with
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
-    canvas.addEventListener('mousedown', click, false);
 
     // Get the window size
     sizeX = window.innerWidth;
@@ -56,7 +59,7 @@ function init() {
     // Set the canvas size to window dimensions.
     // Note we are setting it on the 'element', not on the 'context'.
     // The context is for working with the canvas.
-    canvas.width = sizeX;
+    canvas.width  = sizeX;
     canvas.height = sizeY;
 
     // Create initial circles
@@ -71,25 +74,21 @@ function init() {
 }
 
 function resizeCanvas() {
-    sizeX = window.innerWidth;
-    sizeY = window.innerHeight;
-    canvas.width = sizeX;
+    sizeX         = window.innerWidth;
+    sizeY         = window.innerHeight;
+    canvas.width  = sizeX;
     canvas.height = sizeY;
     window.requestAnimationFrame(draw);
 }
 
-function click(event) {
-    console.log(event);
-}
-
 function newCircle(hasRandomColor) {
     // get a random position for x and y
-    var randX = Math.floor(Math.random() * sizeX) + 1;
-    var randY = Math.floor(Math.random() * sizeY) + 1;
-    var randMaxRadius = Math.floor(Math.random() * globalMaxRadius) + globalMinRadius;
-    var randAnimTime  = Math.floor(Math.random() * globalMaxAnimTime) + globalMinAnimTime;
-    var randTimeToLive = Math.floor(Math.random() * globalMaxPulses) + globalMinPulses;
-    var rgbColorString = hasRandomColor ? randomColor() : colors[Math.floor(Math.random() * colors.length)];
+  var randX          = Math.floor(Math.random() * sizeX) + 1;
+  var randY          = Math.floor(Math.random() * sizeY) + 1;
+  var randMaxRadius  = Math.floor(Math.random() * globalMaxRadius)   + globalMinRadius;
+  var randAnimTime   = Math.floor(Math.random() * globalMaxAnimTime) + globalMinAnimTime;
+  var randTimeToLive = Math.floor(Math.random() * globalMaxPulses)   + globalMinPulses;
+  var rgbColorString = hasRandomColor ? randomColor() : colors[Math.floor(Math.random() * colors.length)];
     // Push a new circle to the circles array
     // See circle object for info
     circles.push(new Circle(id, randX,randY, 0, randMaxRadius, rgbColorString, randAnimTime, randTimeToLive, randAnimTime / 2));
@@ -121,8 +120,8 @@ function collectGarbage(frequency) {
 function draw() {
     // Clear the canvas
     ctx.clearRect(0, 0, sizeX, sizeY);
-    // Set the background to black
-    ctx.fillStyle = 'black';
+
+    ctx.fillStyle = backgroundColor;
     ctx.fillRect(0,0,sizeX,sizeY);
 
     // Draw each circle
