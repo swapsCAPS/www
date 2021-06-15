@@ -24,6 +24,10 @@ body, h1, h2, p {
   max-width: 24.5em;
 }
 
+.container.dark {
+  color: #a9a9a9;
+}
+
 .card {
   position: relative;
   background-color: #fdfdfd;
@@ -34,6 +38,13 @@ body, h1, h2, p {
   -moz-box-shadow:    5px 5px 0px 0px #7f7f7f4f;
   -webkit-box-shadow: 5px 5px 0px 0px #7f7f7f4f;
   box-shadow:         5px 5px 0px 0px #7f7f7f4f;
+}
+
+.card.dark {
+  background-color: #333333;
+  -moz-box-shadow:    5px 5px 0px 0px #ffffff4f;
+  -webkit-box-shadow: 5px 5px 0px 0px #ffffff4f;
+  box-shadow:         5px 5px 0px 0px #ffffff4f;
 }
 
 .card-content {
@@ -61,5 +72,4 @@ body, h1, h2, p {
   position: absolute;
   right: 0.8em;
   bottom: 0.8em;
-
 }

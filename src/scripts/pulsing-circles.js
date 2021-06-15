@@ -15,8 +15,8 @@ var globalMaxRadius   = 20;
 var globalMinRadius   = 10;
 var globalMaxPulses   = 2;
 var globalMinPulses   = 1;
-var globalMaxAnimTime = 30000;
-var globalMinAnimTime = 25000;
+var globalMaxAnimTime = 15000;
+var globalMinAnimTime = 5000;
 var amountOfCircles   = 300;
 var id                = 0;
 
@@ -48,10 +48,31 @@ function Circle(id, x, y, radius, maxRadius, rgbColorString, animTime, timeToLiv
 // Listen for window resize
 window.addEventListener('resize', resizeCanvas, false);
 
+function setDark(className) {
+    Array.from(document.getElementsByClassName(className)).forEach(function (element) {
+        element.classList.add("dark")
+    })
+}
+
 function init() {
     // Get the canvas element to work with
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
+
+    var darkThemeEnabled = window.localStorage.getItem('darkThemeEnabled') === "true"
+    window.localStorage.setItem('darkThemeEnabled', darkThemeEnabled)
+
+    if (darkThemeEnabled) {
+        setDark('container')
+        setDark('card')
+    }
+
+    backgroundColor = window.localStorage.getItem('backgroundColor') || backgroundColor
+    window.localStorage.setItem('backgroundColor', backgroundColor)
+
+    var colorScheme = window.localStorage.getItem('colorScheme') || 'light'
+    window.localStorage.setItem('colorScheme', colorScheme)
+    colors = colorSchemes[colorScheme]
 
     // Get the window size
     sizeX = window.innerWidth;
