@@ -19,41 +19,28 @@ body, h1, h2, p {
 }
 
 .container {
-  position: relative;
   color:    #b0b0b0;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vw;
+  margin: 10em auto 0 auto;
+  max-width: 24.5em;
 }
 
 .card {
-  position: absolute;
+  position: relative;
   background-color: #fdfdfd;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  border-radius: 0.3em;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 32em;
-  height: 20em;
-
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
+  margin: 0 0.8em 0 0.8em;
+  height: 14em;
+  padding: 0.8em;
+  border-radius: 2px;
+  -moz-box-shadow:    5px 5px 0px 0px #7f7f7f4f;
+  -webkit-box-shadow: 5px 5px 0px 0px #7f7f7f4f;
+  box-shadow:         5px 5px 0px 0px #7f7f7f4f;
 }
 
 .card-content {
-  position: absolute;
-  left:     0.8em;
-  top:      0.6em;
-  bottom:   0.6em;
-  right:    0.8em;
+  position: relative;
 }
 
 .head {
-  margin-top: 0.2em;
   font-size: 18pt;
 }
 
@@ -72,7 +59,7 @@ body, h1, h2, p {
 
 .footer{
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 0.8em;
+  bottom: 0.8em;
 
 }
