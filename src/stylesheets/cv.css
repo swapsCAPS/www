@@ -23,7 +23,7 @@ body {
   max-width: 69rem;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 768px) {
   .container {
     flex-direction: column;
   }
@@ -42,6 +42,13 @@ body {
 
 .profile-wrapper {
   margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .profile-wrapper {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
 }
 
 .profile-pic {
