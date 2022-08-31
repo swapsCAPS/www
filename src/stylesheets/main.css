@@ -1,65 +1,20 @@
 body {
   background-color: black;
   font-family: 'Source Code Pro', monospace;
-  overflow: hidden;
   font-size: 14pt;
 }
 
-body, h1, h2, p {
+body, h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
 
-#canvas {
-  position: fixed;
-  left:     0;
-  top:      0;
-  bottom:   0;
-  right:    0;
-}
-
-.container {
-  color:    #b0b0b0;
-  margin: 10em auto 0 auto;
-  max-width: 24.5em;
-}
-
-.card {
-  position: relative;
-  background-color: #fdfdfd;
-  margin: 0 0.8em 0 0.8em;
-  height: 14em;
-  padding: 0.8em;
-  border-radius: 2px;
-  -moz-box-shadow:    5px 5px 0px 0px #7f7f7f4f;
-  -webkit-box-shadow: 5px 5px 0px 0px #7f7f7f4f;
-  box-shadow:         5px 5px 0px 0px #7f7f7f4f;
-}
-
-.card-content {
-  position: relative;
-}
-
-.head {
-  font-size: 18pt;
-}
-
-.paragraph {
-  margin-top: 1.2em;
-}
-
-.card a:link, a:visited {
+a:link, a:visited {
   text-decoration: none;
   color: inherit;
 }
 
-.card a:hover {
+a:hover {
   text-decoration: underline;
 }
 
-.footer{
-  position: absolute;
-  right: 0.8em;
-  bottom: 0.8em;
-
-}
