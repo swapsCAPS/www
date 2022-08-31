@@ -1,18 +1,6 @@
-ul {
-  margin-top: 0;
-  margin-top: 0;
-}
-
 body {
   background-color: white;
 }
-
-@media only screen and (min-width: 1080px) {
-  body {
-    padding: 2rem;
-  }
-}
-
 
 .container {
   display: flex;
@@ -21,6 +9,14 @@ body {
   background-color: #EEEEEE;
   box-shadow:         0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   max-width: 69rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 1080px) {
+  body {
+    padding: 2rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
