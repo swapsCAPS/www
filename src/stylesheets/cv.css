@@ -2,6 +2,15 @@ body {
   background-color: white;
 }
 
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 3em;
+}
+
+.mono {
+  font-family: 'Source Code Pro', monospace;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -12,18 +21,6 @@ body {
   min-height: 100rem;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media only screen and (min-width: 64rem) {
-  body {
-    padding: 2rem;
-  }
-}
-
-@media only screen and (max-width: 48rem) {
-  .container {
-    flex-direction: column;
-  }
 }
 
 .side-bar {
@@ -37,20 +34,12 @@ body {
   margin-bottom: 1rem;
 }
 
-h1 {
-  margin-bottom: 0.5rem;
-  font-size: 3em;
+.side-bar ul {
+  padding-left: 2rem;
 }
 
 .profile-wrapper {
   margin-bottom: 2rem;
-}
-
-@media only screen and (max-width: 48rem) {
-  .profile-wrapper {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
 }
 
 .profile-pic {
@@ -84,6 +73,52 @@ h1 {
 
 .main .content {
   margin-top: 3rem;
+  font-family: "Montserrat"
+}
+
+.main .content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main .content h5 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.main .content ul {
+  padding-left: 1.5rem;
+}
+
+@media only screen and (min-width: 64rem) {
+  body {
+    padding: 2rem;
+  }
+
+  .specs {
+    font-size: 12pt;
+  }
+}
+
+@media only screen and (max-width: 64rem) {
+  .profile-pic {
+    height: 12.5rem;
+    width: 12.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 48rem) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+  .profile-wrapper {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
 }
 
 @media print {
@@ -95,9 +130,15 @@ h1 {
     font-size: 2.5rem;
   }
 
-  /* h3 { */
-    /* font-size: 2.5rem; */
-  /* } */
+  .profile-pic {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .specs {
+    font-size: 9pt;
+  }
+
 
   .container {
     font-size: 11pt;
