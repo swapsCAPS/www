@@ -7,19 +7,20 @@ body {
   flex-direction: row;
   font-size: 12pt;
   background-color: #EEEEEE;
-  box-shadow:         0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  max-width: 69rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  max-width: 70.71rem;
+  min-height: 100rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 64rem) {
   body {
     padding: 2rem;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 48rem) {
   .container {
     flex-direction: column;
   }
@@ -36,11 +37,16 @@ body {
   margin-bottom: 1rem;
 }
 
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 3em;
+}
+
 .profile-wrapper {
   margin-bottom: 2rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 48rem) {
   .profile-wrapper {
     text-align: center;
     margin-bottom: 3rem;
@@ -48,8 +54,8 @@ body {
 }
 
 .profile-pic {
-  height: 15rem;
-  width: 15rem;
+  height: 16rem;
+  width: 16rem;
   border-radius: 50%;
   margin-bottom: 0.5rem;
 }
@@ -68,25 +74,36 @@ body {
   color: #333;
 }
 
-.main h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
 .main .header {
   margin-top: 1rem;
 }
 
-.main .header h1 {
-  margin-bottom: 0.5rem;
-  font-size: 3em;
-}
-
 .main .header h3 {
   color: #b71c1c;
-  font-size: 1.5em;
 }
 
 .main .content {
   margin-top: 3rem;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  /* h3 { */
+    /* font-size: 2.5rem; */
+  /* } */
+
+  .container {
+    font-size: 11pt;
+    min-height: auto;
+    height: 100vh;
+    box-shadow: none !important;
+  }
+
 }
