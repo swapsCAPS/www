@@ -84,6 +84,8 @@ h1 {
 .main .content h5 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  color: #5E5E5E;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .main .content ul {
