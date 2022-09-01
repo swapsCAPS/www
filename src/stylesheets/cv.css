@@ -52,7 +52,7 @@ h1 {
 .summary {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: start;
 }
 
 .summary div {
@@ -97,6 +97,10 @@ h1 {
     height: 12.5rem;
     width: 12.5rem;
   }
+
+  .summary {
+    justify-content: space-around;
+  }
 }
 
 @media only screen and (max-width: 48rem) {
@@ -108,16 +112,11 @@ h1 {
     text-align: center;
     margin-bottom: 3rem;
   }
-
-  .summary {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
 }
 
-@media only screen and (max-width: 36rem) {
+@media only screen and (max-width: 30rem) {
   .summary {
-    justify-content: space-between;
+    justify-content: start;
   }
 
   .summary {
