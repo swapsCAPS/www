@@ -3,7 +3,6 @@ body {
 }
 
 h1 {
-  margin-bottom: 0.5rem;
   font-size: 3em;
 }
 
@@ -29,17 +28,9 @@ h1 {
   padding: 2rem;
 }
 
-.side-bar h3 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
 .side-bar ul {
   padding-left: 2rem;
-}
-
-.profile-wrapper {
-  margin-bottom: 2rem;
+  list-style-type: square;
 }
 
 .profile-pic {
@@ -58,13 +49,19 @@ h1 {
   font-size: 10pt;
 }
 
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.summary div {
+  width: 13rem;
+}
+
 .main {
   padding: 2rem;
   color: #333;
-}
-
-.main .header {
-  margin-top: 1rem;
 }
 
 .main .header h3 {
@@ -72,17 +69,10 @@ h1 {
 }
 
 .main .content {
-  margin-top: 3rem;
   font-family: "Montserrat"
 }
 
-.main .content h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
 .main .content h5 {
-  margin-top: 1rem;
   margin-bottom: 0.5rem;
   color: #5E5E5E;
   font-family: 'Source Code Pro', monospace;
@@ -107,19 +97,32 @@ h1 {
     height: 12.5rem;
     width: 12.5rem;
   }
-
 }
 
 @media only screen and (max-width: 48rem) {
   .container {
     flex-direction: column;
   }
-}
 
-@media only screen and (max-width: 48rem) {
   .profile-wrapper {
     text-align: center;
     margin-bottom: 3rem;
+  }
+
+  .summary {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 36rem) {
+  .summary {
+    justify-content: space-between;
+  }
+
+  .summary {
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 }
 
