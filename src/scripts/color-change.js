@@ -105,4 +105,9 @@ const colorChanger = (() => {
   colorPrimary.forEach((e) => {
     e.style.color = theme.primaryColor;
   });
+
+  const meta = document.createElement('meta')
+  meta.name = 'theme-color'
+  meta.content = theme.primaryColor
+  document.getElementsByTagName('head')[0].appendChild(meta)
 })();
