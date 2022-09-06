@@ -82,6 +82,15 @@ h1 {
   padding-left: 1.5rem;
 }
 
+#pet-projects li p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#pet-projects ul {
+  margin-top: 1.0rem;
+}
+
 @media only screen and (min-width: 64rem) {
   body {
     padding: 2rem;
