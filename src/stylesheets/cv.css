@@ -49,6 +49,10 @@ h1 {
   font-size: 10pt;
 }
 
+.specs div {
+  margin-bottom: 0.25rem;
+}
+
 .summary {
   display: flex;
   flex-wrap: wrap;
