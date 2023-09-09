@@ -20,16 +20,6 @@ const colorChanger = (() => {
       textColor: "white",
     },
     {
-      type: "purple900",
-      primaryColor: "#4a148c",
-      textColor: "white",
-    },
-    {
-      type: "deeppurple900",
-      primaryColor: "#311b92",
-      textColor: "white",
-    },
-    {
       type: "indigo700",
       primaryColor: "#303f9f",
       textColor: "white",
@@ -75,20 +65,16 @@ const colorChanger = (() => {
       textColor: "white",
     },
     {
-      type: "brown900",
-      primaryColor: "#3e2723",
-      textColor: "white",
-    },
-    {
       type: "bluegrey500",
       primaryColor: "#607d8b",
       textColor: "white",
     },
   ];
 
-  const theme = utils.sample(themes);
+  const searchParams = new URL(window.location.href).searchParams
 
-  console.log(theme.type);
+  const userChosenTheme = searchParams.has("theme") && themes.find(t => t.type === searchParams.get("theme"))
+  const theme = userChosenTheme || utils.sample(themes);
 
   const bgColorPrimary = Array.from(
     document.getElementsByClassName("bg-color-primary")
