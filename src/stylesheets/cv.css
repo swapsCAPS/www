@@ -11,8 +11,9 @@ h1 {
 }
 
 .container {
+  position: relative;
+  display: -webkit-box; /* wkhtmltopdf uses this one */
   display: flex;
-  /* display: -webkit-box; [> wkhtmltopdf uses this one <] */
   flex-direction: row;
   font-size: 12pt;
   background-color: #EEEEEE;
@@ -41,8 +42,8 @@ h1 {
 }
 
 .profile-footer {
+  display: -webkit-box; /* wkhtmltopdf uses this one */
   display: flex;
-  /* display: -webkit-box; [> wkhtmltopdf uses this one <] */
   justify-content: space-around;
 }
 
@@ -55,8 +56,8 @@ h1 {
 }
 
 .summary {
+  display: -webkit-box; /* wkhtmltopdf uses this one */
   display: flex;
-  /* display: -webkit-box; [> wkhtmltopdf uses this one <] */
   flex-wrap: wrap;
   justify-content: start;
 }
@@ -68,6 +69,13 @@ h1 {
 .main {
   padding: 2rem;
   color: #333;
+}
+
+.location {
+  display: none;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
 }
 
 .main .header h3 {
@@ -165,6 +173,10 @@ h1 {
     min-height: auto;
     height: 100vh;
     box-shadow: none !important;
+  }
+
+  .location {
+    display: block;
   }
 
 }
