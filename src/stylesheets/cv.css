@@ -12,7 +12,6 @@ h1 {
 
 .container {
   position: relative;
-  display: -webkit-box; /* wkhtmltopdf uses this one */
   display: flex;
   flex-direction: row;
   font-size: 12pt;
@@ -34,6 +33,11 @@ h1 {
   list-style-type: square;
 }
 
+.profile-pic-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .profile-pic {
   height: 16rem;
   width: 16rem;
@@ -42,7 +46,6 @@ h1 {
 }
 
 .profile-footer {
-  display: -webkit-box; /* wkhtmltopdf uses this one */
   display: flex;
   justify-content: space-around;
 }
@@ -56,7 +59,6 @@ h1 {
 }
 
 .summary {
-  display: -webkit-box; /* wkhtmltopdf uses this one */
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -154,8 +156,17 @@ h1 {
     margin: 0;
   }
 
-  h1 {
-    font-size: 2.5rem;
+  .side-bar {
+    color: white;
+    padding: 1rem;
+  }
+
+  .specs {
+    font-size: 9pt;
+  }
+
+  .summary {
+    font-size: 9pt;
   }
 
   .profile-pic {
@@ -163,20 +174,16 @@ h1 {
     width: 12rem;
   }
 
-  .specs {
-    font-size: 9pt;
-  }
-
-
   .container {
-    font-size: 11pt;
-    min-height: auto;
-    height: 100vh;
+    font-size: 10pt;
+    min-height: unset;
+    height: unset;
+    max-width: unset;
     box-shadow: none !important;
   }
 
   .location {
-    display: block;
+    display: block
   }
 
 }
