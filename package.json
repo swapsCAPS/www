@@ -1,0 +1,11 @@
+{
+  "name": "www",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "cv:pdf": "node scripts/render-cv.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.15.0"
+  }
+}

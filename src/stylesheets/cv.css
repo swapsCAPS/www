@@ -110,7 +110,7 @@ h1 {
 @media only screen and (min-width: 64rem) {
   body {
     padding-top: 4rem;
-    padding-bottom: 24rem;
+    padding-bottom: 4rem;
   }
 
   .specs {
@@ -119,6 +119,10 @@ h1 {
 }
 
 @media only screen and (max-width: 64rem) {
+  body {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
   .profile-pic {
     height: 12.5rem;
     width: 12.5rem;
@@ -149,41 +153,4 @@ h1 {
     padding-left: 0rem;
     padding-right: 0rem;
   }
-}
-
-@media print {
-  @page {
-    margin: 0;
-  }
-
-  .side-bar {
-    color: white;
-    padding: 1rem;
-  }
-
-  .specs {
-    font-size: 9pt;
-  }
-
-  .summary {
-    font-size: 9pt;
-  }
-
-  .profile-pic {
-    height: 12rem;
-    width: 12rem;
-  }
-
-  .container {
-    font-size: 10pt;
-    min-height: unset;
-    height: unset;
-    max-width: unset;
-    box-shadow: none !important;
-  }
-
-  .location {
-    display: block
-  }
-
 }
