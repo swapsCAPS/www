@@ -43,12 +43,18 @@
 
       <div class="summary">
         <div>
-          <h3 class="mt-2">Languages:</h3>
+          <h3 class="mt-2">Programming:</h3>
           <ul>
             <li>TypeScript</li>
             <li>Kotlin</li>
             <li>Rust</li>
             <li>Python</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mt-2">Spoken:</h3>
+          <ul>
             <li>Dutch</li>
             <li>English</li>
           </ul>
@@ -79,12 +85,13 @@
             <li>Neovim</li>
             <li>Opencode</li>
             <li>Kitty</li>
+            <li>Tmux</li>
             <li>IntelliJ</li>
-            <li>ssh</li>
+            <li>SSH</li>
             <li>Linux</li>
             <li>Docker</li>
-            <li>bash</li>
-            <li>git</li>
+            <li>Bash</li>
+            <li>Git</li>
             <li>Gitlab CI</li>
             <li>GitHub Actions</li>
           </ul>
@@ -111,14 +118,17 @@
 
       <div class="content mt-3">
         <h2>About me:</h2>
-        <p>Senior Full-Stack &amp; DevOps Engineer with 9+ years of experience designing scalable event-driven systems,
-          cloud infrastructure, and platform tooling. Pragmatic builder focused on high-throughput architectures,
-          developer experience, and sustainable tech adoption.</p>
+        <p>
+          Senior engineer with 9+ years shipping event-driven systems, real-time telemetry platforms, and self service
+          cloud infrastructure platforms at enterprise scale. Comfortable across the stack, from in-vehicle services to
+          Kafka platforms serving 100+ teams. I love automating, remotely making LEDs blink, and building things people
+          directly benefit from.
+        </p>
 
         <h2 class="mt-3">Experience</h2>
 
         <h5 class="mt-2">2024 - Present</h5>
-        <h3>DevOps Engineer V - Albert Heijn Engineering Enablement Platform</h3>
+        <h3>Senior DevOps Engineer - Albert Heijn Engineering Enablement Platform</h3>
         <p>
           Designed, implemented, and operated an enterprise-wide Confluent Cloud Kafka Platform used by over 100 teams.
           Focused on developer experience, data governance, and auditable lineage, utilizing GitHub for the frontend
@@ -126,21 +136,23 @@
         </p>
         <ul>
           <li>
-            Designed and operated a zero-downtime data replication pipeline and process using MirrorMaker2, enabling
-            more than 50 teams to seamlessly migrate Kafka clusters.
-          </li>
-          <li>
             Designed the organization's consolidated Kafka Infrastructure as Code (IaC) framework using Pulumi and
             GitHub Actions, utilizing an adapter pattern to mitigate vendor lock-in and maintain backwards
             compatibility.
           </li>
           <li>
-            Modernized Kubernetes deployments by upgrading legacy custom Helm charts for forwards compatibility and
-            migrating multiple legacy Strimzi Kafka clusters to a new Kubernetes environment.
+            Overhauled Kafka Connect infrastructure on Azure AKS, migrating legacy IaC to Strimzi-based tooling and
+            implementing automated GitHub Actions for Connector deployment, streamlined image building and Connect
+            plugin management.
           </li>
           <li>
-            Overhauled Kafka Connect infrastructure on Azure AKS, migrating legacy IaC to Strimzi-based tooling and
-            implementing automated GitHub Actions for streamlined image building and Connect plugin management.
+            Designed and operated a data replication pipeline using MirrorMaker2 along with the on-boarding process,
+            enabling more than 50 teams to seamlessly migrate from 6 separate Kafka clusters into 2.
+          </li>
+          <li>
+            Migrated multiple legacy Strimzi Kafka clusters to a new Kubernetes environment using MirrorMaker2 data
+            replication and a coordinated hard DNS cutover with dozens of teams on standby. Upgraded legacy custom Helm
+            charts for forwards compatibility to unblock the move.
           </li>
           <li>
             Provided architectural guidance, technical support, and platform governance for the 100+ engineering teams
@@ -151,72 +163,62 @@
         <h5 class="mt-2">2022 - 2024</h5>
         <h3>Senior Software Engineer, Engineering Manager &amp; PO - ChargePoint</h3>
         <p>
-          Assumed a more leading and facilitating role in a core software domain after a reorganisation. In this role
-          I am backed by the many learnings of past years, and apply them in such a way so that our team can enjoy a
-          healthy way of working and priorities are set with a good balance between new features, tech debt and
-          support tickets.
+          Moved into a leading and facilitating role in a core software domain after a company reorganization,
+          applying lessons from the previous years to keep the team's way of working healthy and ensured a good balance
+          between new features, tech debt, and support tickets.
         </p>
         <ul>
-          <li>Leading a team, where we own the vehicle domain and legacy ViriCiti systems</li>
-          <li>Facilitating scrum ceremonies</li>
-          <li>Managing product backlog, incoming support tickets and addressing technical debt</li>
-          <li>Organizing and performing 1 on 1's and feedback sessions</li>
-          <li>Facilitating periodic Way of Working meetings</li>
-          <li>Conducting code reviews</li>
-          <li>Facilitating knowledge sharing sessions</li>
-          <li>Steering and making architectural decisions</li>
-          <li>Key player and engineering representative in multi stakeholder initiatives</li>
+          <li>Led the team owning the vehicle domain and legacy ViriCiti systems</li>
+          <li>Rebuilt the legacy J1939 DM processor into a scalable Kafka Streams application in Kotlin</li>
+          <li>Drove architectural decisions and balanced feature work, tech debt, and support load</li>
           <li>
-            Member of advisory cloud software council, where I advocate for a "you build it you own it" mentality
+            Sat on the advisory cloud software council, advocating for a "you build it, you own it" culture
           </li>
-          <li>Rebuilt legacy J1939 DM processor into scalable Kafka Streams application using Kotlin</li>
+          <li>Performed 1-on-1s, feedback cycles, knowledge sharing sessions, and team way-of-working sessions</li>
         </ul>
 
         <h5 class="mt-2">2017 - 2022</h5>
         <h3>Lead Developer - ViriCiti, later part of ChargePoint</h3>
         <p>
-          Starting in a junior software engineering role I have developed myself over the course of four years to
-          become a Senior Software Engineer and Lead Developer. Now, together with an amazing team I'm building,
-          maintaining and owning multiple legacy &amp; modern services/architectures in our domain driven
-          microservices framework. One day you're digging in the bits and bytes of a CAN-frame, the next you're
-          spinning up 12 replicas of a service you've built.
+          Started in a junior software engineering role and grew over four years into a Senior Software Engineer and
+          Lead Developer. Worked with the team on multiple legacy and modern services in our domain-driven
+          microservices framework. One day you'd be digging in the bits and bytes of a CAN-frame, the next you'd be
+          spinning up 12 replicas of a service you had built.
         </p>
         <ul>
-          <li>Massively refactored and improved legacy event streaming service</li>
-          <li>Built efficient Kafka to AWS S3 offloader</li>
-          <li>Implemented 3rd party SSO SAML2.0/OAuth2 support</li>
-          <li>Co-wrote back end architecture for new domain using federated Apollo GraphQL services</li>
-          <li>Acquired solid understanding of Mongo aggregations (and their verbosity...)</li>
-          <li>Built services integrating with 3rd party ITCS systems</li>
-          <li>Built several NodeJS and Rust apps running on our in-vehicle device</li>
-          <li>Built IFTTT-like service for sending commands to vehicles</li>
-          <li>Maintained and improved public WebSocket server; exposing live data streams</li>
-          <li>Performing job interviews</li>
-          <li>Organizing hackathons</li>
-          <li>Organizing and performing 1 on 1's and feedback sessions</li>
-          <li>Lots more that I can't remember</li>
+          <li>Massively refactored a legacy event streaming service</li>
+          <li>Built an efficient Kafka to S3 offloader</li>
+          <li>Implemented 3rd party SSO (SAML2.0 / OAuth2)</li>
+          <li>
+            Co-wrote the backend architecture for a new domain using federated Apollo GraphQL services and MongoDB
+          </li>
+          <li>Built several Node.js apps running on our in-vehicle device</li>
+          <li>Built an IFTTT-like service for sending CAN commands to vehicles</li>
+          <li>Built an in-vehicle HTTP to CAN proxy in Rust using Rocket</li>
+          <li>Maintained and improved the public WebSocket server exposing live vehicle data streams</li>
+          <li>Interviewing, hackathon organization, 1-on-1s, and mentoring</li>
         </ul>
 
         <h5 class="mt-2">2016</h5>
         <h3>Freelance</h3>
         <p>
-          Successfully demonstrated insecurity of Android apps for the AVROTROS TV show "Opgelicht?! Cybercrime"
-          during live stand-up comedy show.
+          Demonstrated insecurity of Android apps for the AVROTROS TV show "Opgelicht?! Cybercrime" during a live
+          stand-up comedy show.
         </p>
         <ul>
-          <li>RAT Android app with hand-built (lol don't do that) TCP communication protocol</li>
+          <li>RAT Android app with a custom TCP protocol</li>
           <li>Java C&amp;C server</li>
           <li>ExpressJS file server</li>
         </ul>
 
         <h5 class="mt-2">2007 - 2016</h5>
         <h3>Bartender &amp; Manager - Café de Laurierboom</h3>
-        <p>9 Fantastic years working and running the family bar.</p>
+        <p>Nine fantastic years working and eventually running the family bar.</p>
         <ul>
-          <li>Cash counting Android app connecting to (dad's) custom-built Access back office</li>
+          <li>Cash counting Android app connecting to (dad's) custom-built MS Access back office</li>
           <li>Python server for syncing data</li>
           <li>Small contributions to AOSP Cyanogenmod</li>
-          <li>Android APK code injector script <span class="mono">h4x</span></li>
+          <li>Android APK code injection scripts</li>
           <li>Lots and lots of gezelligheid</li>
         </ul>
 
@@ -266,8 +268,6 @@
           <li class="mt-1_5">
             <h4>
               <a href="https://github.com/swapsCAPS/esp32-woohoo" target="_blank">esp32-woohoo</a>
-              |
-              <a href="https://github.com/swapsCAPS/esp32-woohoo" target="_blank">repo</a>
             </h4>
             <p>
               3D printed, battery powered ESP32 + BME280 sensor project, using MQTT protocol for data transfer and
