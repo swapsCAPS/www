@@ -23,9 +23,9 @@ body {
   height: 14em;
   padding: 0.8em;
   border-radius: 2px;
-  -moz-box-shadow:    10px 10px 10px 2px #7f7f7f4f;
-  -webkit-box-shadow: 10px 10px 10px 2px #7f7f7f4f;
-  box-shadow:         10px 10px 10px 2px #7f7f7f4f;
+  -moz-box-shadow:    5px 5px 10px 2px #7f7f7f4f;
+  -webkit-box-shadow: 5px 5px 10px 2px #7f7f7f4f;
+  box-shadow:         5px 5px 10px 2px #7f7f7f4f;
 }
 
 .card-content {
